@@ -7,7 +7,7 @@
   </head>
   <body>
     
-    <div class="footer text-center my-0">
+    <div class="footer text-center my-0 mt-2">
         <p class="bg-primary text-light py-2 my-0">Design & Developed By Avnish Bharadva</p>
     </div>
 
