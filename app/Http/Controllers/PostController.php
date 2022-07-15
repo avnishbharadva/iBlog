@@ -30,6 +30,13 @@ class PostController extends Controller
         $posts->status = $request['status'];
         $posts->save();
 
-        return redirect('post/create');
+        return redirect('post/all');
+    }
+
+    public function allpost()
+    {
+        $posts = Posts::all();
+        $data = compact('posts');
+        return view('all')->with($data);
     }
 }

@@ -20,7 +20,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">My Posts</a>
+                <a class="nav-link" href="{{url('post/all')}}">My Posts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('post/create')}}">Create Post</a>
