@@ -46,4 +46,15 @@ class PostController extends Controller
         $data = compact('posts');
         return view('all')->with($data);
     }
+
+    public function fullpost($id)
+    {
+        $posts = Posts::where('post_id',$id)->get();
+
+        // echo "<pre>";
+        // print_r($posts);
+        // echo "</pre>";
+        $data = compact('posts');
+        return view('fullpost')->with($data);
+    }
 }
