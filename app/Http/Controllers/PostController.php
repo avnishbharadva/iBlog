@@ -7,6 +7,13 @@ use App\Models\Posts;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        $posts = Posts::orderBy('post_id','desc')->get();
+        $data = compact('posts');
+        return view('index')->with($data);
+    }
+
     public function create()
     {
         $posts = new Posts;

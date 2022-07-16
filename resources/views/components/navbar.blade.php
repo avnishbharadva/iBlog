@@ -33,7 +33,7 @@
 
             @if (session()->has('userid'))
             {{-- <li class="nav-item"> --}}
-              <p class="text-muted">Hello, {{session()->get('username')}}</p>
+              <button class="btn btn-primary disabled">Hello, {{session()->get('username')}}</button>
             {{-- </li> --}}
             <a href="{{url('/logout')}}">
               <button class="btn btn-info" type="submit">LogOut</button>
