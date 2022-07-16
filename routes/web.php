@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,6 @@ Route::get('/', function () {
 Route::get('/post/create',[PostController::class,'create']);
 Route::post('/post/store',[PostController::class,'store']);
 Route::get('/post/all',[PostController::class,'allpost']);
+Route::post('/signup',[UserController::class,'index']);
+Route::post('/login',[UserController::class,'login']);
+Route::get('/logout',[UserController::class,'logout']);
