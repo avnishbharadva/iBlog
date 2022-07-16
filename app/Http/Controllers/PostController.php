@@ -59,4 +59,14 @@ class PostController extends Controller
         $data = compact('posts');
         return view('fullpost')->with($data);
     }
+
+    public function delete($id)
+    {
+        $post = Posts::where('post_id',$id);
+        if(!is_null($post))
+        {
+            $post->delete();
+        }
+        return redirect('/post/all');
+    }
 }

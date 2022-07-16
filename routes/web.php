@@ -23,3 +23,4 @@ Route::post('/signup',[UserController::class,'index']);
 Route::post('/login',[UserController::class,'login']);
 Route::get('/logout',[UserController::class,'logout']);
 Route::get('fullpost/{id}',[PostController::class,'fullpost']);
+Route::get('/post/delete/{id}',[PostController::class,'delete']);

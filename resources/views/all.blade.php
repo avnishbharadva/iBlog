@@ -48,7 +48,7 @@
               <a href=""><button type="button" class="btn btn-sm btn-primary">Edit</button></a> 
             </td>
               <td>
-                <a href=""><button type="button" class="btn btn-sm btn-danger">Delete</button></a>
+                <a href="{{url('/post/delete/'.$post->post_id)}}"><button type="button" class="btn btn-sm btn-danger">Delete</button></a>
               </td>
             </tr>
             @endforeach
