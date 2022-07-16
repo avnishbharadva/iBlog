@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Posts::orderBy('post_id','desc')->get();
+        $posts = Posts::where('status',1)->orderBy('post_id','desc')->get();
         $data = compact('posts');
         return view('index')->with($data);
     }
@@ -35,6 +35,8 @@ class PostController extends Controller
 
         $posts->post_tag = $request['post_tag'];
         $posts->status = $request['status'];
+        $posts->userid = session()->get('userid');
+        $posts->username = session()->get('username');
         $posts->save();
 
         return redirect('post/all');
@@ -42,7 +44,7 @@ class PostController extends Controller
 
     public function allpost()
     {
-        $posts = Posts::all();
+        $posts = Posts::where('username',session()->get('username'))->get();
         $data = compact('posts');
         return view('all')->with($data);
     }

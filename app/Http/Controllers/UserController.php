@@ -42,7 +42,10 @@ class UserController extends Controller
         return redirect('/');
         }
         else
-            echo "login failed";
+        {
+            // echo "<script>alert('Login Failed')</script>";
+            return redirect('/');
+        }
     }
 
     public function logout()

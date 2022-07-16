@@ -10,8 +10,9 @@
       <div class="card mt-3">
           <div class="card-body">
               <h4 class="card-title">{{$post->post_title}}</h4>
-              <span class="badge bg-primary">{{$post->post_created_at}}</span>
-              <span class="badge bg-secondary">{{$post->post_tag}}</span>
+              <span class="badge bg-primary">By {{$post->username}}</span>
+              <span class="badge bg-primary">{{$post->created_at}}</span>
+              <span class="badge bg-primary">{{$post->post_tag}}</span>
               <img src="{{ asset('images/posts/'.$post->post_img)}}" class="card-img-top mt-1" alt="..." style="max-width: 100%;height: auto;">
               <p class="card-text mt-2">{!!$post->post_desc!!}</p>
               <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
